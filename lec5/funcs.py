@@ -9,3 +9,11 @@ def mult(a:int, b:int) -> int:
 
 def div(a:int, b:int) -> int:
     return a // b 
+
+
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    print(div(a,b))
+
+python -m pytest tests/test_funcs.py
