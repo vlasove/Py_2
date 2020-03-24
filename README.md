@@ -16,6 +16,10 @@ TIMING:
 
 
 
+Problems (previous course):
+
+https://contest.yandex.ru/contest/14840/problems/
+
 Problems:
 
 1) Leetcode : https://leetcode.com/
