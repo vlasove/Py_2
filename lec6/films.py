@@ -12,3 +12,10 @@ class Film:
     def delete(self):
         pass 
     
+f = Film(1, 'asd', 200)
+f.save()
+
+
+query_save = "INSERT INTO films VALUES(?,?,?)"
+cur.execute(query_save, (self._id, self.title, self.duration))
+
