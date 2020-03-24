@@ -8,3 +8,6 @@ temp.pop()
 temp.pop()
 temp.pop()
 print('After double pop size:', temp.__sizeof__())
+
+fqweq = 12.121212121212
+print('Floating: %.2f'%fqweq)
