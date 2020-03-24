@@ -1,16 +1,25 @@
-A,B,C = int(input()), int(input()), int(input())
-
-if A == 0 :
-    #BX + C = 0 --> x = -c/b
+def linear(B : int,C : int) -> int :
     if B == 0:
-        print()
+        return 0
     else:
-        print('X: %.2f'%(-C/B))
-else:
+        return 1
+
+def squarer(A : int,B : int, C : int)-> int :
     D = B**2 - 4*A*C  
     if D > 0:
-        x1,x2 = ...
+        return 2
     elif D == 0:
-        x = ... 
+        return 1
     else:
-        print()
+        return 0 
+
+def solve_equation(A,B,C) -> int:
+    if A == 0 :
+        return linear(B -B ,C)
+    else:
+        return squarer(A,B,C)
+
+#A,B,C = int(input()), int(input()), int(input())
+#print(solve_equation(A,B,C))
+
+    
