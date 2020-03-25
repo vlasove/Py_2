@@ -20,6 +20,9 @@ Problems (previous course):
 
 https://contest.yandex.ru/contest/14840/problems/
 
+
+Problem Set 2: https://contest.yandex.ru/contest/17724/problems/
+
 Problems:
 
 1) Leetcode : https://leetcode.com/
