@@ -18,7 +18,15 @@ TIMING:
 
 Problems (previous course):
 
-https://contest.yandex.ru/contest/14840/problems/
+
+ProblemSet1: https://contest.yandex.ru/contest/17296/problems/ 
+
+ProblemSet2: https://contest.yandex.ru/contest/14840/problems/
+
+ProblemSet3: https://contest.yandex.ru/contest/14849/problems/
+
+
+Problems Current course: 
 
 
 Problem Set 2: https://contest.yandex.ru/contest/17724/problems/
