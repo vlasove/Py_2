@@ -50,7 +50,8 @@ class Parser:
                     self.vacancy_bag.append([_id, title, company, self.parse_salary(salary)])
                     _id += 1
                 except:
-                    print("VACANCY SKIPPED")
+                    #print("VACANCY SKIPPED")
+                    pass
 
 
 
