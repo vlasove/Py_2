@@ -41,14 +41,12 @@ class Parser:
         if self.check_connect():
             soup = bs(self.session.get(self.base_url, headers=self.headers).content, "lxml")
             columns = soup.find_all("div", attrs={"data-qa":"vacancy-serp__vacancy"})
-            _id = 0
             for col in columns:
                 try:
                     title = col.find("a", attrs={"data-qa":"vacancy-serp__vacancy-title"}).text
                     company = col.find("a", attrs={"data-qa":"vacancy-serp__vacancy-employer"}).text
                     salary = col.find("span", attrs={"data-qa":"vacancy-serp__vacancy-compensation"}).text
-                    self.vacancy_bag.append([_id, title, company, self.parse_salary(salary)])
-                    _id += 1
+                    self.vacancy_bag.append([ title, company, self.parse_salary(salary)])
                 except:
                     #print("VACANCY SKIPPED")
                     pass

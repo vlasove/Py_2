@@ -11,8 +11,8 @@ class Vacancy:
         conn = sqlite3.connect('data.db')
         cur = conn.cursor()
 
-        query_insert = "INSERT INTO vacancys VALUES(?,?,?,?)"
-        cur.execute(query_insert, (self._id, self.title, self.company, self.salary))
+        query_insert = "INSERT INTO vacancys VALUES(NULL,?,?,?)"
+        cur.execute(query_insert, (self.title, self.company, self.salary))
 
         conn.commit()
         conn.close()
