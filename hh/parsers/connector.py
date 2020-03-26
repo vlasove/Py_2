@@ -19,10 +19,23 @@ class Parser:
             return True 
         return False
 
-    def parse_salary(self, salary_str) -> int:
-        если строка '170\xa0000-230\xa0000 руб.' -- > (230 + 170)/2 * 1000
-        если строка 'от 200\xa0000 руб.' --> 200000
-        если строка 'до 200\xa0000 руб.' --> 200000
+    def get_last_page(self):
+        if self.check_connect():
+            soup = bs(self.session.get(self.base_url, headers=self.headers).content, "lxml")
+            pages = soup.find_all('a', attrs ={'data-qa':'pager-page'})
+            return int(pages[-1].text) - 1
+
+
+
+    def parse_salary(self, salary_str):
+        m_list = salary_str.split('\xa0')
+        if len(m_list) == 3:
+            #$m_list = ['170', '000-230', '000']
+            answer = (int(m_list[0]) + int(m_list[1].split('-')[1]))/2
+            return int(answer) * 1000
+        else:
+            answer = m_list[0].split()[1]
+            return int(answer) * 1000
 
     def get_info(self): 
         if self.check_connect():
