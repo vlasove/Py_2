@@ -16,13 +16,13 @@ class Parser:
         self.auto_bag = []
 
     def check_connect(self):
-        if session.get(self.base_url, headers=self.headers).status_code == 200:
+        if self.session.get(self.base_url, headers=self.headers).status_code == 200:
             return True 
         return False
 
     def get_info(self): 
         if self.check_connect():
-            soup = bs(session.get(self.base_url, headers=self.headers).content, "lxml")
+            soup = bs(self.session.get(self.base_url, headers=self.headers).content, "lxml")
             columns = soup.find_all("a", attrs={"class":"IndexMarks__item"})
             _id = 0
             for col in columns:

@@ -1,5 +1,5 @@
 from model.auto import Auto 
-from parser.connector import Parser 
+from parsers.connector import Parser 
 
 BASE_URL = 'https://auto.ru/'
 
