@@ -1,8 +1,7 @@
 import sqlite3 
 
 class Vacancy:
-    def __init__(self, _id, title, company, salary):
-        self._id = _id 
+    def __init__(self, title, company, salary): 
         self.title = title
         self.company = company
         self.salary = salary

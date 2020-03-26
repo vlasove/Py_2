@@ -3,7 +3,7 @@ from parsers.connector import Parser
 
 from tqdm import tqdm 
 
-BASE_URL = 'https://hh.ru/search/vacancy?L_is_autosearch=false&area=1&clusters=true&enable_snippets=true&search_period=30&text=Python&page=%i'
+BASE_URL = 'https://hh.ru/search/vacancy?L_is_autosearch=false&area=1&clusters=true&enable_snippets=true&search_period=30&text=JavaScript&page=%i'
 
 p = Parser(BASE_URL%(0))
 last_page = p.get_last_page()
