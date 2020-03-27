@@ -13,12 +13,3 @@ for j in tqdm(range(0, last_page + 1)):
     for vac in current_parser.vacancy_bag:
         new_vac = Vacancy(vac[0], vac[1], vac[2])
         new_vac.add_to_database()
-# p.get_info()
-
-
-
-# print(p.vacancy_bag)
-
-# for item in p.auto_bag:
-#     auto = Auto(item[0], item[1], item[2])
-#     auto.add_to_database()
